@@ -1,0 +1,9 @@
+@startuml
+actor User
+participant "CatRestControllerV1" as Controller
+participant "CatService" as Service
+User -> Controller : GET /api/v1/cats/1
+Controller -> Service : getCatById(1)
+Service --> Controller : CatDto
+Controller --> User : 200 OK + CatDto
+@enduml
