@@ -1,9 +1,31 @@
-@startuml
+@startuml CatIntegration_Sequence
 actor User
 participant "CatRestControllerV1" as Controller
 participant "CatService" as Service
+participant "CatMapper" as mapper
+participant "RateLimiter" as limiter
+participant "FeignApiClient" as feignClient
+participant "ExternalApi(wiremock)"
+participant "ExceptionHandler"
 User -> Controller : GET /api/v1/cats/1
+
 Controller -> Service : getCatById(1)
-Service --> Controller : CatDto
-Controller --> User : 200 OK + CatDto
+Service -> limiter : tryAcquire()
+Service -> feignClient : getCatById(1) \n(добавляет X-CAT-Key)
+feignClient -> "ExternalApi(wiremock)" : GET /cats/1 \n(X-API-KEY)
+    alt cat found
+    "ExternalApi(wiremock)" -> feignClient : ResponseEntity(Cat)
+    Service -> mapper : toDto(Cat cat)
+    mapper ---> Service : CatDto
+    Service --> Controller : CatDto
+    Controller --> User : 200 OK + CatDto
+else cat not found
+    "ExternalApi(wiremock)" -> feignClient : 404 NOT FOUND
+    feignClient -> Service : FeignException.NotFound
+    Service -> "ExceptionHandler" : handleFeignNotFound()
+    "ExceptionHandler" -> mapper : toDto()
+    mapper -> "ExceptionHandler" : ExceptionDto(404)
+    "ExceptionHandler" -> Controller : ExceptionDto(404)
+    Controller -> User : ResponseEntity 404 + ExceptionDto
+end
 @enduml
