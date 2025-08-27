@@ -3,3 +3,12 @@ spring:
     name: weqapiintegration
 server:
   port: 8099
+cat:
+  api:
+    base-url: ${CAT_API_BASE_URL:http://localhost:8081}
+    key: ${CAT_API_KEY:demo-secret-key}
+    max-rps: ${CAT_API_MAX_RPS:5}
+
+logging:
+  level:
+    com.github.Alex_Surkov: DEBUG

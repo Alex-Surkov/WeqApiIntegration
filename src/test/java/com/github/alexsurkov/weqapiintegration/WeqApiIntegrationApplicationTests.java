@@ -1,4 +1,4 @@
-package com.github.Alex_Surkov.weqapiintegration;
+package com.github.alexsurkov.weqapiintegration;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -6,8 +6,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class WeqApiIntegrationApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads() {
+    }
 
 }
