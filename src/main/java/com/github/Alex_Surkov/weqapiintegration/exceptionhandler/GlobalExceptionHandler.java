@@ -1,6 +1,6 @@
-package com.github.alexsurkov.weqapiintegration.exceptionhandler;
+package com.github.Alex_Surkov.weqapiintegration.exceptionhandler;
 
-import com.github.alexsurkov.weqapiintegration.dto.ErrorDto;
+import com.github.Alex_Surkov.weqapiintegration.dto.ErrorDto;
 import feign.FeignException;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;

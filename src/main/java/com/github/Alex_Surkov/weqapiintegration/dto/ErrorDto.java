@@ -1,4 +1,4 @@
-package com.github.alexsurkov.weqapiintegration.dto;
+package com.github.Alex_Surkov.weqapiintegration.dto;
 
 import java.time.LocalDateTime;
 

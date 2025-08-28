@@ -1,4 +1,4 @@
-package com.github.alexsurkov.weqapiintegration.config;
+package com.github.Alex_Surkov.weqapiintegration.config;
 
 import io.github.resilience4j.ratelimiter.RateLimiter;
 import io.github.resilience4j.ratelimiter.RateLimiterConfig;

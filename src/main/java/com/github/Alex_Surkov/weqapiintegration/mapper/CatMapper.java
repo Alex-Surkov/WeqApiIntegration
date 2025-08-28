@@ -1,6 +1,6 @@
-package com.github.alexsurkov.weqapiintegration.mapper;
+package com.github.Alex_Surkov.weqapiintegration.mapper;
 
-import com.github.alexsurkov.weqapiintegration.dto.CatDto;
+import com.github.Alex_Surkov.weqapiintegration.dto.CatDto;
 import net.proselyte.catapiintegration.model.Cat;
 import org.mapstruct.Mapper;
 

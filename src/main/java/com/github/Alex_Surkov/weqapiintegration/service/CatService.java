@@ -1,8 +1,8 @@
-package com.github.alexsurkov.weqapiintegration.service;
+package com.github.Alex_Surkov.weqapiintegration.service;
 
-import com.github.alexsurkov.weqapiintegration.dto.CatDto;
-import com.github.alexsurkov.weqapiintegration.exceptionhandler.CatApiUnauthorizedException;
-import com.github.alexsurkov.weqapiintegration.mapper.CatMapper;
+import com.github.Alex_Surkov.weqapiintegration.dto.CatDto;
+import com.github.Alex_Surkov.weqapiintegration.exceptionhandler.CatApiUnauthorizedException;
+import com.github.Alex_Surkov.weqapiintegration.mapper.CatMapper;
 import feign.FeignException;
 import io.github.resilience4j.ratelimiter.RateLimiter;
 import lombok.RequiredArgsConstructor;

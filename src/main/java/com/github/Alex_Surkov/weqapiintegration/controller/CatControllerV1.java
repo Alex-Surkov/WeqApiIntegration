@@ -1,6 +1,6 @@
-package com.github.alexsurkov.weqapiintegration.controller;
+package com.github.Alex_Surkov.weqapiintegration.controller;
 
-import com.github.alexsurkov.weqapiintegration.service.CatService;
+import com.github.Alex_Surkov.weqapiintegration.service.CatService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

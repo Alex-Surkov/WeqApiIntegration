@@ -1,4 +1,4 @@
-package com.github.alexsurkov.weqapiintegration.dto;
+package com.github.Alex_Surkov.weqapiintegration.dto;
 
 public record CatDto(Long id,
                      String name,

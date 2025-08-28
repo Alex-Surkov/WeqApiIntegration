@@ -12,3 +12,16 @@ services:
       timeout: 3s
       retries: 5
       start_period:  5s
+  my-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: catapiint:v1.6
+    container_name: my-api-service
+    environment:
+      CAT_API_BASE_URL: http://fake-cat-api:8080
+    depends_on:
+      - fake-cat-api
+
+    ports:
+      - "8099:8085"

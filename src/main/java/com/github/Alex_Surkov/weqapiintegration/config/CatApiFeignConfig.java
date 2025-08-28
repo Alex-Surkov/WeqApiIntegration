@@ -1,4 +1,4 @@
-package com.github.alexsurkov.weqapiintegration.config;
+package com.github.Alex_Surkov.weqapiintegration.config;
 
 import feign.RequestInterceptor;
 import org.springframework.beans.factory.annotation.Value;
